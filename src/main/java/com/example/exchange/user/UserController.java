@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.exchange.item.Item;
+
 import java.util.List;
 
 @RestController
@@ -21,4 +23,6 @@ public class UserController {
     public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }
+
+    
 }
