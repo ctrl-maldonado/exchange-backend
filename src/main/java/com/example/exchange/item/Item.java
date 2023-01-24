@@ -13,6 +13,10 @@ public class Item {
     private int itemId;
 
     private String itemName;
+    private String description;
+    private String color;
+    private String brand;
+    private Long date;
 
     @JsonBackReference
     @ManyToOne
@@ -36,13 +40,19 @@ public class Item {
     }
 
 
-    public Item( String itemName, User user, User userSaved, Category category) {
+    
+
+    public Item(int itemId, String itemName, String description, String color, String brand, Long date, User user, Category category) {
+        this.itemId = itemId;
         this.itemName = itemName;
+        this.description = description;
+        this.color = color;
+        this.brand = brand;
+        this.date = date;
         this.user = user;
-        this.userSaved = userSaved;
         this.category = category;
     }
-
+    
     public int getItemId() {
         return this.itemId;
     }
@@ -79,4 +89,50 @@ public class Item {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    public String getColor() {
+        return color;
+    }
+
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+
+    public String getBrand() {
+        return brand;
+    }
+
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+
+    public Long getDate() {
+        return date;
+    }
+
+
+    public void setDate(Long date) {
+        this.date = date;
+    }
+
+    
 }

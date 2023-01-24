@@ -7,4 +7,6 @@ import com.example.exchange.category.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
+
+    Category findByCategoryId(int categoryId);
 }
